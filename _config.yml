@@ -1,0 +1,22 @@
+menu:
+  Home: /index.html
+  Archive: /archives/
+  About: /about/
+  GitHub: https://github.com/ironmaxtory
+  # Rss: /atom.xml
+  # Category: /categories/
+
+favicon: /favicon.png
+logo: /favicon.png
+
+# Comment
+# e.g disqus: seansun
+disqus:
+duoshuo:
+
+# Analytics
+# google-analytics:
+ga: UA-65933410-1
+
+# Copyright Infomation
+startyear: 2015

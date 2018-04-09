@@ -1,0 +1,40 @@
+@import './config.scss';
+
+.sider {
+  padding: 50px 0 0;
+}
+
+.card {
+  margin: 0 auto 30px;
+  padding: 20px 30px 20px 15px;
+  border: 1px solid $color-border;
+
+  .right {
+    float: right;
+  }
+
+  .title {
+    border-bottom: 1px dashed $color-border;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+  }
+
+  & > ul[class*="list"] {
+    color: $color-info;
+    list-style-type: square;
+    list-style-position: inside;
+  }
+
+  .category-list-count,
+  .tag-list-count,
+  .archive-list-count {
+    float: right;
+  }
+
+  .img-cntr {
+    text-align: center;
+  }
+  img {
+    max-width: 150px;
+  }
+}

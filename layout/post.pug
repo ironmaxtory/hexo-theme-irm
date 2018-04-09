@@ -1,0 +1,17 @@
+extends partial/layout
+
+block site_title
+    != page.title + " · " + config.title
+
+block site_description
+    - var desc = page.desc || page.title + ' - ' + config.author;
+    meta(name="description", content=desc)
+
+block content
+    include mixins/post
+    +post(page)
+
+block pagination
+    include mixins/paginator
+    +post()
+    //- include partial/comment

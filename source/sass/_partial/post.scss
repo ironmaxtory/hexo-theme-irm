@@ -1,0 +1,361 @@
+@import './config.scss';
+
+.post {
+  padding-top: 1em;
+}
+
+// 文章列表ul，每个li是一个.post-block
+.post-block {
+  .post-title {
+    margin: 0.65em 0 0.3em;
+
+    &, & a {
+      font-size: 24px;
+      font-weight: bolder;
+      color: $color-title;
+    }
+  }
+
+  .post-info {
+    color: $color-info;
+    margin: 0 0 1.2em;
+
+    span {
+      margin-left: 0.5rem;
+    }
+
+    a.post-from {
+      margin-left: 0.5rem;
+      padding: 3px 6px;
+      border-radius: 5px;
+      font-size: 12px;
+      color: $color-white;
+      background-color: $color-primary-invert;
+      // background-color: #E36B6B;
+    }
+  }
+}
+
+// 文章列表页中，每篇文章的内容摘要
+// 以及文章详情页中的文章正文
+.post-content {
+  font-size: 1.1rem;
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    position: relative;
+    margin: 1em 1em;
+
+    &:before {
+      content: "#";
+      color: $color-primary;
+      position: absolute;
+      left: -0.9em;
+      line-height: 1.2;
+      font-size: 1.3em;
+      font-weight: bold;
+    }
+  }
+
+  h4,
+  h5,
+  h6 {
+    a:before {
+      content: "";
+    }
+  }
+
+  h2 { font-size: 1.4rem; }
+  h3 { font-size: 1.3rem; }
+  h4, h5, h6 { font-size: 1.2rem; }
+
+  ul {
+    padding: 0 0 0 2em;
+    list-style-type: square;
+    margin-top: -0.8em;
+  }
+
+  a {
+    color: $color-primary;
+    word-break: break-all;
+  }
+
+  blockquote {
+    // margin: 2em 0;
+    padding: 1px 20px;
+    border-left: 4px solid $color-primary;
+    background-color: #efefef;
+    &, & p {
+      font-size: 0.95em;
+      color: lighten($color-content, 10%);
+    }
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    margin: 1em auto;
+  }
+
+  & > figure.highlight,
+  & > table {
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.125);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.125);
+  }
+
+  .tip {
+    position: relative;
+    margin: 2em 0;
+    padding: 12px 24px 12px 30px;
+    border-left: 4px solid #f66;
+    -webkit-border-top-right-radius: 2px;
+    border-top-right-radius: 2px;
+    -webkit-border-bottom-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    background-color: #f8f8f8;
+
+    br {
+      // display: none;
+    }
+  }
+
+  .tip:before {
+    position: absolute;
+    top: 14px;
+    left: -12px;
+    content: "!";
+    width: 20px;
+    height: 20px;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #f66;
+    font-family: 'Dosis', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+  }
+}
+
+// 专门针对文章详情正文的
+.post .post-block.article {
+  .post-title {
+    // font-size: 34px;
+    font-size: 2.25rem;
+    border-bottom: 1px solid $color-border;
+    margin-bottom: 0.1em;
+    padding-bottom: 0.2em;
+  }
+  .post-info {
+    margin: 0 0 2em;
+  }
+  .post-content {
+    // font-size: 18px;
+    font-size: 1.2rem;
+    h2 {
+      // font-size: 26px;
+      font-size: 1.7rem;
+      border-bottom: 1px solid lighten($color-border, 6%);
+    }
+    h3 {
+      // font-size: 24px;
+      font-size: 1.6rem;
+    }
+    h4, h5, h6 {
+      // font-size: 22px;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+#mask {
+  position: fixed;
+  overflow: scroll;
+  width: 100%;
+  height: 100%;
+  padding: 1em 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+
+  #mask-image {
+    max-width: 95%;
+  }
+}
+
+code,
+pre {
+  font-size: 0.8em;
+  background-color: #f8f8f8;
+  // font-family: Georgia,serif;
+  // letter-spacing: 1px;
+  // word-spacing: 4px;
+  // font-family: 'Roboto Mono', Monaco, courier, monospace;
+}
+
+.highlight {
+  position: relative;
+  margin: 1em 0;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  line-height: 1.1em;
+  background-color: #f8f8f8;
+  overflow-x: auto;
+
+  table,
+  td,
+  tr {
+    width: 100%;
+    border-collapse: collapse;
+    padding: 0;
+    margin: 0;
+  }
+
+  .gutter pre, .code pre {
+    line-height: 1.5em;
+    margin: 0;
+    .line {
+      width: auto;
+      height: 18px;
+    }
+  }
+
+  .gutter {
+    width: 14px;
+    padding: 0 4px;
+  }
+  .gutter, .gutter pre {
+    background-color: #eaeaea;
+    color: #aaa;
+    font-family: Georgia,serif;
+  }
+
+  .code pre {
+    padding: 1.2em 1.4em;
+  }
+}
+
+%code-base {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #ccc;
+  text-align: right;
+  font-size: 0.75em;
+  padding: 5px 10px 0;
+  line-height: 15px;
+  height: 15px;
+  font-weight: 600;
+}
+@mixin code-signs($keys) {
+   @each $key in $keys{
+    .highlight.#{$key} .code:after {
+      content: to-upper-case($key);
+      @extend %code-base;
+    }
+  }
+}
+$signs: ("html", "js", "bash", "css", "scss","diff", "java", "xml", "python", "json", "swift", "ruby", "perl", "php", "c", "java", "cpp", "ts");
+@include code-signs($signs);
+
+.highlight.cpp .code:after {
+  content: 'C++';
+}
+
+pre {
+  color: #525252;
+
+  .constant,
+  .function .keyword {
+    color: #0092db;
+  }
+
+  .attribute,
+  .keyword {
+    color: #e96900;
+  }
+
+  .literal,
+  .number {
+    color: #ae81ff;
+  }
+
+  .change,
+  .clojure .built_in,
+  .flow,
+  .lisp .title,
+  .nginx .title,
+  .tag,
+  .tag .title,
+  .tex .special,
+  .winutils {
+    color: #2973b7;
+  }
+
+  .regexp,
+  .symbol,
+  .symbol .string,
+  .value {
+    color: #42b983;
+  }
+
+  .title {
+    color: #83B917;
+  }
+
+  .addition,
+  .apache .cbracket,
+  .apache .tag,
+  .attr_selector,
+  .built_in,
+  .django .filter .argument,
+  .django .template_tag,
+  .django .variable,
+  .envvar,
+  .haskell .type,
+  .javadoc,
+  .preprocessor,
+  .prompt,
+  .pseudo,
+  .ruby .class .parent,
+  .smalltalk .array,
+  .smalltalk .class,
+  .smalltalk .localvars,
+  .sql .aggregate,
+  .stream,
+  .string,
+  .subst,
+  .tag .value,
+  .tex .command {
+    color: #42b983;
+  }
+
+  .apache .sqbracket,
+  .comment,
+  .doctype,
+  .java .annotation,
+  .pi,
+  .python .decorator,
+  .shebang,
+  .template_comment,
+  .tex .formula {
+    color: #b3b3b3;
+  }
+
+  .deletion {
+    color: #BA4545;
+  }
+
+  .coffeescript .javascript,
+  .javascript .xml,
+  .tex .formula,
+  .xml .cdata,
+  .xml .css,
+  .xml .javascript,
+  .xml .vbscript {
+    opacity: 0.5;
+  }
+}

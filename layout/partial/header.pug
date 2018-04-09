@@ -1,0 +1,15 @@
+header
+  a.logo-link(href=url_for())
+    img(src=url_for(theme.logo) alt="logo")
+  ul.nav.nav-list
+    //- 遍历主题配置文件中的 menu
+    each value, key in theme.menu
+      li.nav-list-item
+        - var re = /^(http|https):\/\/*/gi;
+        - var tar = re.test(value) ? "_blank" : "_self"
+        - var isFirstPage = page.current == 1;
+        - var isCorrespond = isFirstPage ? ("/"+page.current_url===value) : (("/"+page.current_url) === (value+config.pagination_dir+"/"+page.current+"/"));
+        - var act = !re.test(value) && isCorrespond;
+        - act = act || (is_post && url_for(page.path).indexOf(value)===0);
+        a.nav-list-link(class={active: act}, href=url_for(value), target=tar, data-value=value, data-current_url=page.current_url, data-path=page.path, data-fullpath=url_for(page.path), data-current=page.current)
+          != key.toUpperCase()

@@ -1,0 +1,48 @@
+@import './config.scss';
+
+.paginator {
+  margin: 4em 0;
+  text-align: center;
+
+  .next,
+  .prev {
+    display: inline-block;
+    margin: 0 30px;
+    padding: 4px 12px;
+    // border-radius: 4px;
+    // border: 1px solid darken($color-primary, 10%);
+    // border-bottom: 1px solid darken($color-primary, 5%);
+    font-size: 16px;
+    font-weight: bold;
+    color: $color-primary;
+    // background-color: $color-primary;
+
+    &:hover {
+      color: darken($color-primary, 5%);
+      // background-color: darken($color-primary, 5%);
+    }
+  }
+}
+
+.copyright {
+  margin: 4em 0 1em;
+  border-top: 1px solid $color-border;
+  text-align: center;
+  padding-top: 10px;
+
+  a,
+  p {
+    color: $color-tip;
+    font-size: 14px;
+    font-weight: 100;
+  }
+
+  a:hover {
+    color: darken($color-tip, 15%);
+  }
+}
+
+#disqus_thread,
+.ds-thread {
+  margin-bottom: 2em;
+}

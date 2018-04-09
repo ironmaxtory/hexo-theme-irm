@@ -1,0 +1,41 @@
+@import './config.scss';
+
+.archive {
+    max-width: 90%;
+    margin: 2em auto;
+    .post-item {
+        padding: 5px 0 5px 50px;
+        &:hover {
+          background-color: #efefef;
+        }
+    }
+    .post-relative {
+      margin-left: 120px;
+      word-wrap: break-word;
+      word-break: break-all;
+    }
+    .post-time,
+    .post-title-link {
+        font-size: 1.15rem;
+    }
+    .post-title-link {
+        color: #42b983;
+        word-break: break-all;
+        &:hover {
+            border-bottom: 0;
+            color: #267B54;
+        }
+    }
+    .post-info {
+        float: left;
+        width: 110px;
+        color: #7f8c8d;
+    }
+    .post-info-other {
+      display: inline-block;
+      margin-left: 10px;
+      color: lighten($color-grey-dark, 8%);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+}

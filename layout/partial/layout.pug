@@ -1,0 +1,31 @@
+doctype html
+html(lang=config.language)
+  head
+    meta(charset="UTF-8")
+    meta(name="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, user-scalable=no")
+    block site_description
+      meta(name="description", content= config.description ? config.description : 'A Blog Powered By Hexo')  
+    title
+      block site_title
+        =config.title
+    link(rel="icon", href=url_for(theme.favicon))
+    link(rel="stylesheet", href=url_for("css/irm.css"))
+  body
+    .layout-wrapper
+      .layout-header
+        //- header 不需要定制，直接引入
+        include header
+      .layout-content
+        //- content 需要针对性定制
+        .layout-content-alpha
+          block content
+        .layout-content-beta
+          include sider
+      .layout-footer    
+        //- pagination 需要针对性定制
+        block pagination
+        //- copyright 不需要定制，直接引入
+        include copyright  
+    //- script 不需要定制，直接引入     
+    include script      

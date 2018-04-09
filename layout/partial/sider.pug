@@ -1,0 +1,21 @@
+.sider
+  if (!is_home())
+    .card    
+      h3.title 分类
+      != list_categories()
+    .card 
+      h3.title 标签
+      != list_tags()
+    .card 
+      h3.title 归档
+      != list_archives()
+      
+  if (is_home()) 
+    .card 
+      h3.title 分类
+      != list_categories()
+    .card
+      h3.title
+        a(href=url_for(theme.menu['About']), alt="About Me") 关于我
+      div.img-cntr
+        img(src="http://cdn.ironmaxi.com/images/wechat/qrcode_pure.png", alt="程序猿何大叔公众号二维码")

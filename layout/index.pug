@@ -1,0 +1,12 @@
+extends partial/layout
+
+block content
+  //- 主体内容
+  include mixins/post
+  +posts()
+  
+
+block pagination  
+  //- 分页
+  include mixins/paginator
+  +home()

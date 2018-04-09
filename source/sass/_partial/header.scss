@@ -1,0 +1,33 @@
+header {
+
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  .logo-link {
+    float: left;
+  }
+
+  .nav {
+    float: right;
+    left: 80px;
+  }
+
+  .logo-link {
+    height: 60px;
+    & img {
+      max-height: 100%;
+    }
+  }
+
+  .nav-list-item {
+    display: inline-block;
+    padding: 19px  10px ;
+    a {
+      font-size: 16px;
+      line-height: 1.4;
+    }
+  }
+}
