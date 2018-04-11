@@ -9,3 +9,10 @@
 @import "./_partial/post.scss";
 @import "./_partial/sider.scss";
 @import "./_partial/media-query.scss";
+
+@font-face {
+    font-family: 'Georgia';
+    src: url('../font/Georgia.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -363,7 +363,10 @@ dl {
   list-style-type: none; }
 
 ul, ol {
-  list-style-position: inside; }
+  list-style-position: outside;
+  margin-left: 1.8em; }
+  ul ul, ul ol, ol ul, ol ol {
+    margin-left: 0; }
 
 ul {
   list-style-type: square; }
@@ -381,17 +384,23 @@ html, body {
   font-size: 15px; }
 
 body {
-  color: #34495e;
+  color: #2f4154;
   line-height: 1.6;
   background-color: #ffffff;
-  font-family: SimSun, Georgia, serif; }
+  font-family: Georgia, serif; }
+
+h1, h2, h3 {
+  font-weight: bolder; }
 
 p {
   margin: 1em 0; }
 
 a {
   color: #3ba676;
-  text-decoration: none; }
+  text-decoration: none;
+  font-family: Georgia, serif;
+  font-size-adjust: none;
+  font-weight: 600; }
 
 a:hover {
   color: #359368;
@@ -512,8 +521,9 @@ header .nav-list-item {
 
 .home.post-list.recent .post-info-date {
   display: inline-block;
-  width: 120px;
-  color: #999999; }
+  width: 140px;
+  color: #666666;
+  font-size: 16px; }
 
 .home.post-list.recent .post-title {
   display: inline; }
@@ -534,11 +544,9 @@ header .nav-list-item {
   .archive .post-title-link {
     font-size: 1.15rem; }
   .archive .post-title-link {
-    color: #42b983;
     word-break: break-all; }
     .archive .post-title-link:hover {
-      border-bottom: 0;
-      color: #267B54; }
+      border-bottom: 0; }
   .archive .post-info {
     float: left;
     width: 110px;
@@ -546,7 +554,7 @@ header .nav-list-item {
   .archive .post-info-other {
     display: inline-block;
     margin-left: 10px;
-    color: #adadad;
+    color: #7a7a7a;
     font-size: 12px;
     white-space: nowrap; }
 
@@ -640,18 +648,18 @@ header .nav-list-item {
     font-size: 1.2rem; }
   .post-content ul {
     padding: 0 0 0 2em;
-    list-style-type: square;
-    margin-top: -0.8em; }
+    list-style-type: square; }
   .post-content a {
     color: #42b983;
     word-break: break-all; }
   .post-content blockquote {
+    margin: -10px 0 0;
     padding: 1px 20px;
     border-left: 4px solid #42b983;
     background-color: #efefef; }
     .post-content blockquote, .post-content blockquote p {
       font-size: 0.95em;
-      color: #46637f; }
+      color: #415b75; }
   .post-content img {
     display: block;
     max-width: 100%;
@@ -749,7 +757,7 @@ pre {
   .highlight .gutter, .highlight .gutter pre {
     background-color: #eaeaea;
     color: #aaa;
-    font-family: Georgia,serif; }
+    font-family: Georgia, serif; }
   .highlight .code pre {
     padding: 1.2em 1.4em; }
 
@@ -927,7 +935,7 @@ pre {
   .layout-wrapper {
     width: 80%;
     min-width: 780px;
-    max-width: 1260px;
+    max-width: 1080px;
     margin: 0 auto; }
   .layout-content:after {
     content: '';
@@ -935,14 +943,14 @@ pre {
     clear: both; }
   .layout-content .layout-content-alpha {
     float: left;
-    width: 73%;
+    width: 70%;
     min-width: 470px;
-    max-width: 900px;
+    max-width: 800px;
     padding-left: 3%; }
   .layout-content .layout-content-beta {
     float: right;
     width: 25%;
-    min-width: 160px;
+    min-width: 220px;
     max-width: 230px; }
   header {
     padding: 20px 0; } }
@@ -984,3 +992,9 @@ pre {
   #disqus_thread,
   .ds-thread {
     margin: 2em 10px; } }
+
+@font-face {
+  font-family: 'Georgia';
+  src: url("../font/Georgia.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal; }

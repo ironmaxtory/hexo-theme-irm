@@ -75,7 +75,6 @@
   ul {
     padding: 0 0 0 2em;
     list-style-type: square;
-    margin-top: -0.8em;
   }
 
   a {
@@ -84,7 +83,7 @@
   }
 
   blockquote {
-    // margin: 2em 0;
+    margin: -10px 0 0;
     padding: 1px 20px;
     border-left: 4px solid $color-primary;
     background-color: #efefef;
@@ -230,7 +229,8 @@ pre {
   .gutter, .gutter pre {
     background-color: #eaeaea;
     color: #aaa;
-    font-family: Georgia,serif;
+    // font-family: Georgia,serif;
+    font-family: $font-family;
   }
 
   .code pre {

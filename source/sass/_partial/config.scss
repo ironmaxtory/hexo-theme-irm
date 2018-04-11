@@ -9,11 +9,11 @@ $color-dark: invert($color-white);
 $color-code: #e96900;
 $color-border: #ddd;
 $color-grey-light: #eeeeee;
-$color-grey-dark: #999999;
+$color-grey-dark: #666666;
 
 
 
-$color-content: $color-main;
+$color-content: darken($color-main, 3%);
 $color-background: $color-white;
 
 $color-content-contrast: $color-white;
@@ -21,6 +21,8 @@ $color-background-contrast: $color-primary;
 
 /* $color-link: #2c3e50;*/
 $color-link: darken($color-primary, 5%);
+
+$font-family: Georgia,serif;
 
 @mixin reset {
   box-sizing: border-box;
