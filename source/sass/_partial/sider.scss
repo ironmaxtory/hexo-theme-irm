@@ -25,6 +25,12 @@
     list-style-position: inside;
   }
 
+  .category-list,
+  .tag-list,
+  .archive-list {
+    margin-left: 0;
+  }
+
   .category-list-count,
   .tag-list-count,
   .archive-list-count {

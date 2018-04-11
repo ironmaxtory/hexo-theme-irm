@@ -922,6 +922,10 @@ pre {
     color: #9aa4a5;
     list-style-type: square;
     list-style-position: inside; }
+  .card .category-list,
+  .card .tag-list,
+  .card .archive-list {
+    margin-left: 0; }
   .card .category-list-count,
   .card .tag-list-count,
   .card .archive-list-count {
