@@ -35,3 +35,8 @@ $ gulp
 ```
 
 For sure, you can also customize the gulpfile.js to make your debug more efficient.
+
+## Last but not least
+I will keep updating and accomplish the theme.
+
+If you like the theme, leave your star :satisfied:
