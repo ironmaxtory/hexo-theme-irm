@@ -1,0 +1,21 @@
+doctype html
+html(lang=config.language)
+  head
+    meta(charset="UTF-8")
+    meta(name="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, user-scalable=no")
+    block site_description
+      meta(name="description", content= config.description ? config.description : 'A Blog Powered By Hexo')  
+    title
+      block site_title
+        =config.title
+    link(rel="icon", href=url_for(theme.favicon))
+    link(rel="stylesheet", href=url_for('css/offline.css'))
+  body
+    .offline-cntr
+      .offline 
+        div.img-cntr.logo-img-cntr
+          img(src=url_for('favicon-offline.png'))
+        h3 你似乎来到了一片没有知识存在的荒原
+        p 请检查设备网络状态~
+
