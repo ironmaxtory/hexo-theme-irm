@@ -6,7 +6,7 @@ console.log("我的github：https://github.com/ironmaxtory");
 console.log("我的工程模板github：https://github.com/irm-github");
 console.groupEnd();
 
-var version = '0.0.2';
+var version = '0.0.3';
 var LC_KEY = 'blog.ironmaxi.com/sw_version';
 
 // 注册 service worker

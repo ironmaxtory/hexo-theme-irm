@@ -39,6 +39,7 @@ self.addEventListener('activate', function(event){
       return caches.open(cacheName)
         .then(cache => cache.addAll([                            
           '/', '/index.html',
+          '/script/main.js',
           '/css/irm.css',
           '/favicon.png',
           'https://cdn.ironmaxi.com/images/wechat/qrcode_pure.png',
